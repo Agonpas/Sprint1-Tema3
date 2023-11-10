@@ -25,19 +25,21 @@ function calcularMediaAlumno($notas) { /*la función recibe el array $notas*/
 }
 /*función para mostrar las medias*/
 function mostrarMedias($alumnosNotas) { /*la funcion recibe el array $alumnosNotas*/
-    $sumaMedias = 0;
+    $sumaMedias = 0; /*creo variable sumatorio de medias de los alumnos*/
     echo "\n";
     echo "MEDIAS DE CADA ALUMNO\n";
     echo "\n";
     foreach ($alumnosNotas as $alumno => $notas){
         $mediaAlumno = calcularMediaAlumno($notas); /*llmamos a la función de calculoMediaAlumno*/
-        echo "La media de " . $alumno . " es de: " . $mediaAlumno . "\n";
-        $sumaMedias = $sumaMedias + $mediaAlumno;
+        echo "La media de " . $alumno . " es de: " . $mediaAlumno . "\n"; /* mostramos la media de cada alumno*/
+        $sumaMedias = $sumaMedias + $mediaAlumno; /* suamamos las medias*/
     }
+    /* calculamos y mostramos las medias de la clase*/
     $mediaClase = $sumaMedias / count($alumnosNotas);
     echo "\n";
     echo "La media de la clase es de " . $mediaClase;
 }
+/* por últimollamamos a la función que nos muestra las medias*/
 mostrarMedias($alumnosNotas);
 echo "\n";
 ?>
