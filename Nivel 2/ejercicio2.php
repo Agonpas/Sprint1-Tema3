@@ -32,7 +32,7 @@ function mostrarMedias($alumnosNotas) { /*la funcion recibe el array $alumnosNot
     foreach ($alumnosNotas as $alumno => $notas){
         $mediaAlumno = calcularMediaAlumno($notas); /*llmamos a la función de calculoMediaAlumno*/
         echo "La media de " . $alumno . " es de: " . $mediaAlumno . "\n"; /* mostramos la media de cada alumno*/
-        $sumaMedias = $sumaMedias + $mediaAlumno; /* suamamos las medias*/
+        $sumaMedias += $mediaAlumno; /* suamamos las medias*/
     }
     /* calculamos y mostramos las medias de la clase*/
     $mediaClase = $sumaMedias / count($alumnosNotas);
